@@ -1,5 +1,6 @@
 import { List, ListItem, ListItemIcon, ListItemText, Divider, Drawer } from '@material-ui/core';
 import InboxIcon from '@material-ui/icons/Inbox'
+import OpenInNewIcon from '@material-ui/icons/OpenInNew';
 import { makeStyles } from '@material-ui/core/styles';
 import React from 'react';
 
@@ -13,11 +14,12 @@ export default function MainDrawer(props) {
 
   const classes = useStyles();
 
-  const list = () => {
-    return (
+  return (
+    <Drawer anchor="left" open={props.open} onClose={ props.onClose }>
       <div
         className={classes.list}
         role="presentation"
+        onClick= { props.onClose }
       >
         <List>
           <ListItem button key="Inbox">
@@ -31,18 +33,12 @@ export default function MainDrawer(props) {
         <List>
           <ListItem button key="Another Item">
             <ListItemIcon>
-              <InboxIcon />
+              <OpenInNewIcon />
             </ListItemIcon>
             <ListItemText primary="Another Item" />
           </ListItem>
         </List>
       </div>
-    )
-  };
-
-  return (
-    <Drawer anchor="left" open={props.open}>
-      {list}
     </Drawer>
   )
 }

@@ -12,17 +12,17 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function MainAppbar(prop) {
+export default function MainAppbar(props) {
   const classes = useStyles(); 
 
   return (
     <AppBar position="static">
       <Toolbar>
-        <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+        <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" onClick={ props.openDrawer }>
           <MenuIcon />
         </IconButton>
         <Typography variant="h6" className={classes.title}>
-          { prop.title }
+          { props.title }
         </Typography>
         <Button color="inherit">Login</Button>
       </Toolbar>
