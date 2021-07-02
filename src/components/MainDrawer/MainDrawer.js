@@ -1,8 +1,8 @@
+import React from 'react';
 import { List, ListItem, ListItemIcon, ListItemText, Divider, Drawer } from '@material-ui/core';
 import HomeIcon from '@material-ui/icons/Home';
 import OpenInNewIcon from '@material-ui/icons/OpenInNew';
 import { makeStyles } from '@material-ui/core/styles';
-import React from 'react';
 
 const useStyles = makeStyles({
   list: {
@@ -35,7 +35,7 @@ export default function MainDrawer(props) {
             <ListItemIcon>
               <OpenInNewIcon />
             </ListItemIcon>
-            <ListItemText primary="Open Dialog" />
+            <ListItemText primary="Open Dialog"/>
           </ListItem>
         </List>
       </div>

@@ -1,8 +1,7 @@
+import React from 'react';
 import { Button, Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions } from '@material-ui/core';
-import React, { useState } from 'react';
 
-
-export default function AlertDialog(props) {
+export default function PopupDialog(props) {
   return (
     <div>
       <Dialog
@@ -11,19 +10,18 @@ export default function AlertDialog(props) {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogTitle id="alert-dialog-title">{"Use Google's location service?"}</DialogTitle>
+        <DialogTitle id="alert-dialog-title">A custom PopupDialog</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            Let Google help apps determine location. This means sending anonymous location data to
-            Google, even when no apps are running.
+            A placeholder dialog popup
           </DialogContentText>
         </DialogContent>
         <DialogActions>
           <Button onClick={props.onClose} color="primary">
-            Disagree
+            Cancel
           </Button>
-          <Button onClick={props.onClose} color="primary" autoFocus>
-            Agree
+          <Button onClick={props.onClose} color="secondary" variant="contained" autoFocus>
+            Submit
           </Button>
         </DialogActions>
       </Dialog>
