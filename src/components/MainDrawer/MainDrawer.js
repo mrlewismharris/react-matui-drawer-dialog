@@ -31,7 +31,7 @@ export default function MainDrawer(props) {
         </List>
         <Divider />
         <List>
-          <ListItem button key="Open Dialog">
+          <ListItem button key="Open Dialog" onClick={props.openDialog}>
             <ListItemIcon>
               <OpenInNewIcon />
             </ListItemIcon>
